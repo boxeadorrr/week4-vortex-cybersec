@@ -1,0 +1,87 @@
+# VortexTech – Week 4 Incident Response Plan
+**Cyber Security Internship Track – Advanced Task**
+
+---
+
+## 📌 Scenario
+A customer database was exposed due to an **unsecured API endpoint**. Attackers exploited the endpoint to extract sensitive customer records including names, emails, and partial payment details. The breach was discovered after unusual query logs triggered automated alerts.
+
+---
+
+## 🔐 Incident Response Plan (NIST Framework)
+
+### 1. Preparation
+- Incident Response Team established with defined roles.  
+- Centralized logging and monitoring tools in place.  
+- Regular backups of customer databases.  
+- Access control policies documented and reviewed quarterly.
+
+### 2. Detection & Analysis
+- Automated alert flagged abnormal API queries.  
+- Security team investigated logs and confirmed unauthorized access.  
+- Initial scope analysis identified ~5,000 records potentially exposed.  
+- Incident classified as a **data breach** requiring immediate escalation.
+
+### 3. Containment
+- Revoked compromised API keys.  
+- Isolated affected API server from production.  
+- Blocked suspicious IP addresses at firewall level.  
+- Disabled vulnerable endpoint to prevent further exploitation.
+
+### 4. Eradication
+- Patched the vulnerable API endpoint with proper authentication.  
+- Removed malicious scripts and reset all exposed credentials.  
+- Conducted vulnerability scan to confirm no other entry points.  
+- Verified eradication through penetration testing.
+
+### 5. Recovery
+- Restored database from secure backup.  
+- Reintroduced patched API endpoint with enhanced monitoring.  
+- Continuous log review for 30 days post-incident.  
+- Systems returned to normal operation with heightened alert thresholds.
+
+### 6. Lessons Learned
+- Lack of authentication on API endpoints was a critical oversight.  
+- Need for stricter code review and automated security testing.  
+- Incident highlighted importance of proactive monitoring and regular audits.  
+- Recommendation: integrate security checks into CI/CD pipeline.
+
+---
+
+## 📣 Communication Plan
+- **Immediate (within 1 hour):** Notify CTO, CISO, and Incident Response Lead.  
+- **Within 24 hours:** Inform Legal/Compliance teams.  
+- **Within 72 hours:** Notify affected customers and regulators (per data protection laws).  
+- **Post-Incident:** Share summary report with executive leadership and conduct team debrief.
+
+---
+
+## ✅ Preventative Measures
+1. Enforce **API authentication and authorization** for all endpoints.  
+2. Implement **automated vulnerability scanning** in CI/CD pipeline.  
+3. Conduct **regular security audits and penetration testing**.  
+
+---
+
+## 📂 Repository Instructions
+- Repository Name: `vortextech-cybersec-week4`  
+- Files to include:  
+  - `incident-response-plan.md` (this document)  
+  - `README.md` (short explanation of repo contents)  
+
+---
+
+# README.md
+
+## VortexTech – Week 4 Cybersecurity Task
+This repository contains the **Mini Incident Response Plan** for Week 4 of the Cyber Security Internship Track.  
+
+### Contents
+- `incident-response-plan.md` → Full documented incident response plan following the NIST framework.  
+- `README.md` → Brief explanation of the repository.  
+
+### How to Use
+1. Review the incident response plan for structured guidance on handling breaches.  
+2. Use the document as a reference for future security audits and incident simulations.  
+
+---
